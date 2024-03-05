@@ -11,7 +11,7 @@ export const Platform = {
 };
 
 export const platformAtom = atom<string>({
-  default: Platform.Youtube,
+  default: Platform.Github,
   key: 'platformAtom',
   effects: [persistAtom],
 });

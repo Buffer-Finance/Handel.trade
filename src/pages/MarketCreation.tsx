@@ -135,14 +135,14 @@ const MarketCreation: React.FC<any> = ({ }) => {
                 <ClickAwayListener
                   onClickAway={() => setShow(false)}>
                   <div className='bg-white absolute rounded-[0.7rem] pl-2 mt-5 py-3 pb-4 z-[10] w-[5rem] social-icons-collection'>
-                    {platform !== Platform.Youtube && <div
+                    {/* {platform !== Platform.Youtube && <div
                       onClick={() => {
                         setShow(false);
                         setPlatform(Platform.Youtube);
                       }}
                       className=" ml-[0.5rem] mb-3 cursor-pointer hover-zoom" >
                       <MemoYoutubeLogo />
-                    </div>}
+                    </div>} */}
 
                     {/* {platform !== Platform.Instagram && <div
                       onClick={() => {
@@ -158,7 +158,7 @@ const MarketCreation: React.FC<any> = ({ }) => {
                         setShow(false);
                         setPlatform(Platform.Github);
                       }}
-                      className=" ml-[0.4rem] -mt-5 pt-4 cursor-pointer hover-zoom" >
+                      className=" ml-[0.4rem] -mt-4 -mb-4 pt-4 cursor-pointer" >
                       <MemoGithubIcon className=" scale-[0.95]" />
                     </div>}
 
@@ -166,7 +166,7 @@ const MarketCreation: React.FC<any> = ({ }) => {
                       onClick={() => {
                         setShow(false);
                         setPlatform(Platform.Twitter);
-                      }} className=" mt-[0.4rem] ml-3 cursor-pointer hover-zoom" >
+                      }} className=" mt-[0.4rem] ml-3 cursor-pointer" >
                       <MemoTwitterLogo />
                     </div>}
                   </div>
