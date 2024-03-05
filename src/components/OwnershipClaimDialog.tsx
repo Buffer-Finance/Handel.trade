@@ -6,15 +6,14 @@ import {
   DialogHeader,
   DialogTitle,
 } from '@/components/ui/dialog';
-import { PrimaryBtn, SecondaryBtn, SecondaryButton } from './Buttons';
+import { SecondaryButton } from './Buttons';
 import { useEffect, useState } from 'react';
 import axios from 'axios';
 import toast from 'react-hot-toast';
 import useUserState from '@/atoms/userState';
 import { useSearchParams } from 'react-router-dom';
 import { Platform, useTwitterMarketName } from '@/atoms/platformState';
-// const redirect_url = 'https://handel.network';
-const redirect_url = 'https://handel.network';
+const redirect_url = import.meta.env.VITE_REDIRECT_URL;
 
 const OwnershipClaimDialog: React.FC<any> = ({ }) => {
   const ownershipManager = useOwnershipClaimManager();
