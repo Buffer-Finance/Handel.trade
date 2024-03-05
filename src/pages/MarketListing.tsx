@@ -42,7 +42,7 @@ const MarketListing: React.FC<any> = ({ }) => {
   console.log(`MarketListing-network: `, net);
   return (
     <div className="px-[15px] bg-brandGrey min-h-full pb-10 flex flex-col gap-[10px]">
-      <div className="sticky top-0 flex flex-col w-full pt-4 pb-2 bg-brandGrey gap-y-3">
+      <div className="sticky z-[100] top-0 flex flex-col w-full pt-4 pb-2 bg-brandGrey gap-y-3">
         <MarketSearchBar />
         <div className="flex">
           {searchManager.keyword ? (
@@ -59,15 +59,17 @@ const MarketListing: React.FC<any> = ({ }) => {
           )}
         </div>
       </div>
-      {searchManager.keyword ? (
-        <SearchList />
-      ) : activeTab == 'New' ? (
-        <New />
-      ) : activeTab == 'Top' ? (
-        <Top />
-      ) : (
-        <Mine address={account.address} />
-      )}
+      <div className=' relative z-[1]'>
+        {searchManager.keyword ? (
+          <SearchList />
+        ) : activeTab == 'New' ? (
+          <New />
+        ) : activeTab == 'Top' ? (
+          <Top />
+        ) : (
+          <Mine address={account.address} />
+        )}
+      </div>
     </div>
   );
 };

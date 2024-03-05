@@ -1,10 +1,6 @@
 import { useNavigate } from 'react-router-dom';
-import { faCircleQuestion } from '@fortawesome/free-solid-svg-icons';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { view } from '../../Helpers/bigintUtils';
 import { formatAddress } from '../../Helpers/web3utils';
-import toast from 'react-hot-toast';
-import { useState } from 'react';
 
 const UserCardSm: React.FC<any> = ({ user }) => {
   const navigate = useNavigate();

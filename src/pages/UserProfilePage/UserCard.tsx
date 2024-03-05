@@ -1,12 +1,10 @@
 import { useAccount, useBalance } from 'wagmi';
 import PrimeFadeText from '../../components/PrimeFadeText';
 import PrimeText from '../../components/PrimeText';
-import { view } from '../../Helpers/bigintUtils';
 import useUserState, { useOtherUserState } from '../../atoms/userState';
 import { useParams } from 'react-router-dom';
 import axios from 'axios';
 import { formatAddress } from '../../Helpers/web3utils';
-import { useState } from 'react';
 import { DisplayPrice } from '@/components/DisplayPrice';
 import { Skeleton, TimeoutSkeleton } from '@/components/ui/skeleton';
 
